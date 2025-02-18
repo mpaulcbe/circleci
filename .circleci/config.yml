@@ -11,14 +11,14 @@ jobs:
           name: Build Docker Image
           command: docker build -t my-nginx .
       - run:
-          name: Log in to Docker Hub
-          command: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+          name: moses17224
+          command: echo "mosesusesdocker" | docker login -u "moses17224" --password-stdin
       - run:
           name: Tag Docker Image
-          command: docker tag my-nginx $DOCKER_USERNAME/my-nginx:latest
+          command: docker tag my-nginx moses17224/my-nginx:latest
       - run:
           name: Push Docker Image to Docker Hub
-          command: docker push $DOCKER_USERNAME/my-nginx:latest
+          command: docker push moses17224/my-nginx:latest
 
 workflows:
   version: 2

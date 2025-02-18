@@ -6,8 +6,7 @@ jobs:
       - image: circleci/python:3.8  # Base image for CircleCI job
     steps:
       - checkout  # Pull the latest code
-      - setup_remote_docker:
-          version: 19.03.13  # Enable Docker inside CircleCI (lower version)
+      - setup_remote_docker  # Enable Docker inside CircleCI (default version)
       - run:
           name: Build Docker Image
           command: docker build -t my-nginx .

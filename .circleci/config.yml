@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout  # Pull the latest code
       - setup_remote_docker:
-          version: 20.10.7  # Enable Docker inside CircleCI
+          version: 19.03.13  # Enable Docker inside CircleCI (lower version)
       - run:
           name: Build Docker Image
           command: docker build -t my-nginx .
